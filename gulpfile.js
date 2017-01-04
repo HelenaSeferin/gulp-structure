@@ -60,8 +60,8 @@ gulp.task('scripts', function() {
 gulp.task('revjavascript', ['scripts'], function () {
     return gulp.src(['dist/js/*.js'], {base: 'dist'})
         .pipe(rev())
-        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('dist'))
+        // .pipe(beautify())
         .pipe(rev.manifest())
         .pipe(gulp.dest('dist'));
     });
