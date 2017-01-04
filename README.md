@@ -4,9 +4,15 @@
 
 Estrutura Base para os projetos
 
-## Desenvolvedoras:
+## TODO:
 
-Amanda Vieira e Helena Seferin
+- [x] Compilar e concatenar ```*.SCSS ``` para ```.CSS```;
+- [x] Minificar os arquivos ```.CSS``` encontrados.;
+- [ ] Compilar e concatenar ```*.JS ``` para ```.JS```;
+- [ ] Minificar os arquivos ```.JS``` encontrados.;
+- [ ] Criar o ```REV``` para ```.CSS``` e ```.JS```;
+- [ ] Criar tarefa de Build
+
 
 ## Softwares necessários:
 
@@ -18,9 +24,9 @@ Amanda Vieira e Helena Seferin
 ## Instruções de como utilizar o projeto
 
 ```
-0 - "npm install" 
+0 - "npm install"
 
-1 - Após a instalação rode o comando "gulp" 
+1 - Após a instalação rode o comando "gulp"
 
 ```
 
@@ -31,7 +37,11 @@ Amanda Vieira e Helena Seferin
 * Gulp - Automatizador de Tarefas
 * Browserify - Modularizador de Front-End
 * Uglify - Minificador de JS
+* UglifyCSS - Minificador de CSS
 * BrowserSync - Servidor Local
 * Sass - Preprocessador de CSS
 * Gulp-concat - Concatenador de arquivos JS
-* Gulp-imagemin - Minificador de Imagens
+
+## Desenvolvedoras:
+
+Amanda Vieira e Helena Seferin
