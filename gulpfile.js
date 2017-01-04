@@ -2,6 +2,7 @@ var gulp            = require('gulp');
 var browserSync     = require('browser-sync').create();
 var sass            = require('gulp-sass');
 var uglify          = require('gulp-uglify');
+var beautify        = require('gulp-beautify');
 var streamqueue     = require('streamqueue');
 var concat          = require('gulp-concat');
 var rename          = require('gulp-rename');
@@ -49,8 +50,8 @@ gulp.task('scripts', function() {
 gulp.task('revjavascript', ['scripts'], function () {
     return gulp.src(['dist/js/*.js'], {base: 'dist'})
         .pipe(rev())
-        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('dist'))
+        .pipe(beautify())
         .pipe(rev.manifest())
         .pipe(gulp.dest('dist'));
     });
