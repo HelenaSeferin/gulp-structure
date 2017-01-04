@@ -33,6 +33,5 @@ Amanda Vieira e Helena Seferin
 * Uglify - Minificador de JS
 * BrowserSync - Servidor Local
 * Sass - Preprocessador de CSS
-* Nunjucks - Templates
 * Gulp-concat - Concatenador de arquivos JS
 * Gulp-imagemin - Minificador de Imagens
