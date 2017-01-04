@@ -21,7 +21,8 @@ gulp.task('serve', ['scripts', 'html', 'revjavascript', 'css-compile', 'css-mini
 
 });
 
-/* Cuida a pasta que possui os aquivos de SCSS, modifica para CSS,  direciona para a Dist e atualiza no navegador */
+/* Acessa o diretório src/scss/, procura por todos os arquivos com a extensão .scss,
+ executa o sass do gulp, concatena todos os arquivos e joga p dist  */
 gulp.task('css-compile', function() {
       return gulp.src("src/scss/**/*.scss")
         .pipe(sass())
