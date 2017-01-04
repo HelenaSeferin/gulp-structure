@@ -18,7 +18,7 @@ Amanda Vieira e Helena Seferin
 ## Instruções de como utilizar o projeto
 
 ```
-0 -  "npm install" 
+0 - "npm install" 
 
 1 - Após a instalação rode o comando "gulp" 
 
