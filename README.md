@@ -8,8 +8,8 @@ Estrutura Base para os projetos
 
 - [x] Compilar e concatenar ```*.SCSS ``` para ```.CSS```;
 - [x] Minificar os arquivos ```.CSS``` encontrados.;
-- [ ] Compilar e concatenar ```*.JS ``` para ```.JS```;
-- [ ] Minificar os arquivos ```.JS``` encontrados.;
+- [x] Compilar e concatenar ```*.JS ``` para ```.JS```;
+- [x] Minificar os arquivos ```.JS``` encontrados.;
 - [ ] Criar o ```REV``` para ```.CSS``` e ```.JS```;
 - [ ] Criar tarefa de Build
 
