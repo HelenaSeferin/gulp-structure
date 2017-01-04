@@ -2,33 +2,44 @@ var gulp            = require('gulp');
 var browserSync     = require('browser-sync').create();
 var sass            = require('gulp-sass');
 var uglify          = require('gulp-uglify');
+var uglifycss       = require('gulp-uglifycss');
 var streamqueue     = require('streamqueue');
 var concat          = require('gulp-concat');
 var rename          = require('gulp-rename');
 var sourcemaps      = require('gulp-sourcemaps');
 var rev             = require('gulp-rev');
-var revjavascript   = require('gulp-rev');
 
-gulp.task('serve', ['styles', 'scripts', 'html', 'revjavascript'], function () {
+gulp.task('serve', ['scripts', 'html', 'revjavascript', 'css-compile', 'css-minify'], function () {
 
     browserSync.init({
         server: "./dist"
-    }); 
+    });
 
-    gulp.watch("src/scss/**/*.scss", ['styles']);
+    gulp.watch("src/scss/**/*.scss", ['css-minify']);
     gulp.watch("src/js/*.js", ['scripts']);
     gulp.watch("src/**/*.html").on('change', browserSync.reload);
 
 });
 
 /* Cuida a pasta que possui os aquivos de SCSS, modifica para CSS,  direciona para a Dist e atualiza no navegador */
-gulp.task('styles', function() {
-    return gulp.src("src/scss/**/*.scss")
+gulp.task('css-compile', function() {
+      return gulp.src("src/scss/**/*.scss")
         .pipe(sass())
+        .pipe(concat('style.css'))
         .pipe(gulp.dest("dist/css"))
-        .pipe(browserSync.stream());
+        /*.pipe(browserSync.stream())*/;
 });
- 
+
+gulp.task('css-minify', ['css-compile'], function() {
+    return gulp.src(['dist/css/*.css', '!dist/css/*.min.css'])
+        .pipe(uglifycss())
+        .pipe(rename(function (path) {
+          path.extname = '.min.css';
+        }))
+        .pipe(gulp.dest("dist/css"))
+        /*.pipe(browserSync.stream())*/;
+});
+
 
 /* Pega todos os arquivos que estão na pasta js, une eles em apenas um, concatena, renomeia, minifica, direciona para a Dist e atualiza no navegador */
 gulp.task('scripts', function() {
@@ -58,7 +69,7 @@ gulp.task('revjavascript', ['scripts'], function () {
 
 /* Cuida a pasta que possui o arquivo html, direciona para a Dist e atualiza no navegador */
 gulp.task('html', () =>
-  gulp.src('src/*.html')    
+  gulp.src('src/*.html')
     .pipe(gulp.dest('dist/'))
     .pipe(browserSync.stream())
 );

@@ -25,5 +25,8 @@
     "gulp-sourcemaps": "^1.9.1",
     "gulp-uglify": "^2.0.0",
     "streamqueue": "^1.1.1"
+  },
+  "dependencies": {
+    "gulp-uglifycss": "^1.0.6"
   }
 }
