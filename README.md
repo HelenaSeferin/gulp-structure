@@ -10,8 +10,10 @@ Estrutura Base para os projetos
 - [x] Minificar os arquivos ```.CSS``` encontrados.;
 - [x] Compilar e concatenar ```*.JS ``` para ```.JS```;
 - [x] Minificar os arquivos ```.JS``` encontrados.;
-- [ ] Criar o ```REV``` para ```.CSS``` e ```.JS```;
-- [ ] Criar tarefa de Build
+- [x] Criar o ```REV``` para ```.CSS``` e ```.JS```;
+- [?] Criar tarefa de Build
+- [ ] Minificar ```.HTML```
+- [ ] Minificar Imagens
 
 
 ## Softwares necessários:
