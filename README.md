@@ -11,7 +11,7 @@ Estrutura Base para os projetos
 - [x] Compilar e concatenar ```*.JS ``` para ```.JS```;
 - [x] Minificar os arquivos ```.JS``` encontrados.;
 - [x] Criar o ```REV``` para ```.CSS``` e ```.JS```;
-- [?] Criar tarefa de Build
+- [ ] Criar tarefa de Build
 - [ ] Minificar ```.HTML```
 - [ ] Minificar Imagens
 
