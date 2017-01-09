@@ -1,14 +1,15 @@
+var target          = 'dist/';
 var gulp            = require('gulp');
-var browserSync     = require('browser-sync').create();
+var path            = require('path');
+var rev             = require('gulp-rev');
 var sass            = require('gulp-sass');
 var uglify          = require('gulp-uglify');
-var uglifycss       = require('gulp-uglifycss');
 var concat          = require('gulp-concat');
 var rename          = require('gulp-rename');
+var imagemin        = require('gulp-imagemin');
+var uglifycss       = require('gulp-uglifycss');
 var sourcemaps      = require('gulp-sourcemaps');
-var rev             = require('gulp-rev');
-var target          = 'dist/';
-var path            = require('path');
+var browserSync     = require('browser-sync').create();
 
 gulp.task('serve', ['build'], function () {
 
@@ -81,7 +82,14 @@ gulp.task('css-rev', ['css-minify'], function () {
     .pipe(gulp.dest(target));
 });
 
-
+gulp.task('image-minify', function () {
+  return gulp.src('src/images/**/*')
+    .pipe(imagemin({
+      progressive: true,
+      interlaced: true
+    }))
+    .pipe(gulp.dest(target + 'img'));
+});
 
 gulp.task('browser-sync', function() {
   browserSync({
