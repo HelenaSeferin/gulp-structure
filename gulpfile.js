@@ -7,7 +7,8 @@ var concat          = require('gulp-concat');
 var rename          = require('gulp-rename');
 var sourcemaps      = require('gulp-sourcemaps');
 var rev             = require('gulp-rev');
-var target         = 'dist/';
+var target          = 'dist/';
+var path            = require('path');
 
 gulp.task('serve', ['build'], function () {
 
@@ -61,19 +62,21 @@ gulp.task('html', function() {
 });
 
 gulp.task('js-rev', ['js-minify'], function () {
-  return gulp.src([target + 'js/*.min.js'], {base: target})
+  return gulp.src([target + 'js/*.min.js'])
     .pipe(rev())
-    .pipe(rev.manifest({
-      merge: true
+    .pipe(rev.manifest(target+'rev-manifest.json', {
+      base: target,
+      merge: true,
     }))
     .pipe(gulp.dest(target));
 });
 
 gulp.task('css-rev', ['css-minify'], function () {
-  return gulp.src([target + 'css/*.min.css'], {base: target})
+  return gulp.src([target + 'css/*.min.css'])
     .pipe(rev())
-    .pipe(rev.manifest({
-      merge: true
+    .pipe(rev.manifest(target+'rev-manifest.json', {
+      base: target,
+      merge: true,
     }))
     .pipe(gulp.dest(target));
 });
