@@ -14,6 +14,9 @@ Estrutura Base para os projetos
 - [ ] Criar tarefa de Build
 - [ ] Minificar ```.HTML```
 - [ ] Minificar Imagens
+- [ ] Utilizar BrowserSync
+- [ ] Utilizar SourceMaps
+- [ ] Utilizar autoprefixer
 
 
 ## Softwares necessários:
