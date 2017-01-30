@@ -1,0 +1,79 @@
+.c-main-title {
+  font-size: 2rem;
+
+  img{
+    @media (max-width: $screen-xs-max) {
+      max-width: 90%;
+    }
+  }
+
+  &--about{
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    margin: 0 auto;
+    color: $white;
+  }
+}
+
+.c-main-subtitle {
+  font-size: 1.5rem;
+}
+
+.c-main-article-title {
+  font-size: 3.2rem;
+  font-weight: $font-family-bolder;
+  letter-spacing: -.05em;
+  line-height: .8;
+
+  @media (min-width: $screen-sm) {
+    font-size: 3.2rem;
+  }
+}
+
+.c-main-article-subtitle {
+  color: $brand-primary-light;
+  font-size: 3.75rem;
+  font-weight: 400;
+  letter-spacing: .05em;
+  line-height: .7;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.c-main-article-subtitle-small {
+  color: $brand-primary-light;
+  font-size: 2.4rem;
+  font-weight: 400;
+  letter-spacing: .05em;
+  line-height: .7;
+  margin-top: 0;
+}
+
+.c-small-txt {
+  font-size: .875rem;
+  text-transform: uppercase;
+}
+
+.c-e-book-txt {
+  max-width: 380px;
+  margin-bottom: 4em;
+}
+
+.c-media-title {
+  color: $brand-primary-light;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 1;
+  margin-top: 0;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: $screen-sm) {
+    font-size: 3.75rem;
+    text-align: right;
+  }
+
+  strong {
+    display: block;
+  }
+}

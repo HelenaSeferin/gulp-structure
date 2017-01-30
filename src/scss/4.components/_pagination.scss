@@ -1,0 +1,65 @@
+.c-pagination {
+  font-size: 16px;
+  text-align: center;
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+
+    &:first-child {
+      padding-right: 15px;
+    }
+
+    &:last-child {
+      padding-left: 15px;
+    }
+
+    a {
+      color: #626262;
+
+      &:hover {
+        color: $link-color;
+      }
+    }
+
+    &--active a {
+      color: $link-color;
+      cursor: default;
+      font-weight: 700;
+    }
+  }
+
+  &__btn {
+
+	  &:after {
+	    display: none;
+	  }
+
+	  &:hover,
+	  &:focus,
+	  &:active {
+	    .c-pagination__arrow {
+	      fill: $white;
+	    }
+	  }
+	}
+
+
+  &__arrow {
+    fill: $brand-primary;
+    transition: fill .2s;
+
+
+    &--left {
+      transform: rotate(90deg);
+    }
+
+    &--right {
+      transform: rotate(-90deg);
+    }
+  }
+}

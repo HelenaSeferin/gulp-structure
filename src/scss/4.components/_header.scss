@@ -1,0 +1,33 @@
+.c-main-header {
+  z-index: 2;
+  background-color: $brand-blue-dark;
+  height: 55px;
+  padding-left: 80px;
+
+   @media (max-width: $screen-xs-max) {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    border-bottom: 3px solid #424f61;
+    padding-left: 50px;
+  }
+
+  &__nav-icon {
+
+    @media (max-width: $screen-xs-max) {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      fill: $white;
+    }
+
+    @media (min-width: $screen-sm) {
+      display: none;
+    }
+  }
+
+}
+
+

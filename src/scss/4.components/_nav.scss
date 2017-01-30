@@ -1,0 +1,95 @@
+.c-main-nav {
+
+
+	@media (max-width: $screen-xs-max) {
+    background-color: $brand-blue-dark;
+    width: 100%;
+    top: 60px;
+    left: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .2s;
+    position: fixed;
+  }
+
+  &__logo{
+    width: 100px;
+
+    @media (max-width: $screen-xs-max) {
+    	position: absolute;
+    	top: 12px;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: .5em 0;
+    text-align: left;
+
+    @media (max-width: $screen-xs-max) {
+    	padding: 0;
+    }
+  }
+
+  &__item {
+    padding: 0 2.6em 0;
+    display: inline-block;
+    text-transform: uppercase;
+
+    @media (max-width: $screen-xs-max) {
+      border-bottom: 1px solid #424f61;
+      display: inherit;
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    a {
+      color: $white;
+      display: block;
+      font-size: 14px;
+      font-weight: $font-family-bold;
+
+      > * {
+      	vertical-align: top;
+      }
+    }
+  }
+
+    .is-mobile-active & {
+    max-height: 326px;
+  }
+}
+
+.c-main-nav-right {
+	a{
+    color: $white;
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+	@media (max-width: $screen-xs-max) {
+    width: 180px;
+    padding-top: 7px;
+    float: right;
+    height: 100%;
+    background: inherit;
+
+    a{
+    	font-size: 13px;
+    	text-decoration: 13px;
+    }
+  }
+
+  text-align: center;
+  background: $brand-primary;
+  width: 275px;
+
+
+
+  .is-mobile-active & {
+    max-height: 326px;
+  }
+
+}

@@ -1,0 +1,69 @@
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal ) {
+  @font-face {
+    font-family: $font-family;
+    src: url("#{$file-path}.eot");
+    /* stylelint-disable */
+    // disabling stylelint here because the indentation rule
+    // doesn't like that we align all the url declarations.
+    src: url("#{$file-path}.eot?#iefix") format('embedded-opentype'),
+         url("#{$file-path}.woff2") format('woff2'),
+         url("#{$file-path}.woff") format('woff'),
+         url("#{$file-path}.ttf") format('truetype'),
+         url("#{$file-path}.svg#${font-family}") format('svg');
+    /* stylelint-enable */
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@mixin placeholder-color($text-color) {
+  &:-ms-input-placeholder {
+    color: $text-color;
+  }
+
+  &::-moz-placeholder {
+    color: $text-color;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $text-color;
+  }
+}
+
+@mixin linear-gradient($fromColor, $toColor) {
+
+  background: $fromColor;
+  background: -moz-linear-gradient(left, $fromColor 0%, $toColor 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, $fromColor), color-stop(100%, $toColor));
+  background: -webkit-linear-gradient(left, $fromColor 0%, $toColor 100%);
+  background: -o-linear-gradient(left, $fromColor 0%, $toColor 100%);
+  background: -ms-linear-gradient(left, $fromColor 0%, $toColor 100%);
+  background: linear-gradient(to right, $fromColor 0%, $toColor 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='$fromColor', EndColorStr='$toColor');
+  filter: none;
+}
+
+/*
+ * Image replacement (does not work on buttons/inputs)
+ */
+
+%ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 100%;
+  }
+}
+
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

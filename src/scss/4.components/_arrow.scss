@@ -1,0 +1,22 @@
+.c-arrow {
+  position: absolute;
+  display: inline-block;
+  height: 0;
+  width: 30px;
+  border: 1px solid;
+  padding-top: 30px;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border: 5px solid transparent;
+    margin-top: -2px;
+    transform: translateX(-50%);
+  }
+}

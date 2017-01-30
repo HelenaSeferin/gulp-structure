@@ -1,0 +1,110 @@
+// objects shouldn't have cosmetic styles...
+.o-btn {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  letter-spacing: .1em;
+  margin: 0;
+  text-transform: uppercase;
+  transition: all .2s ease-out;
+  border: none;
+  padding: 1em;
+
+  @media (min-width: $screen-sm) {
+    padding: 1em 2em;
+  }
+
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+
+  &--dbl-lined {
+    line-height: 1.2;
+    padding: .8em 2em .5em;
+  }
+
+  // ...but their modifiers can.
+  &--primary {
+    background-color: $brand-primary;
+    outline: none;
+
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      color: $btn-color-primary;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(.9);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: darken($brand-primary, 5%);
+    }
+  }
+
+  &--margin-bottom{
+    @media (min-width: $screen-xs-max) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &--buy {
+    background: $brand-blue-dark;
+    font-size: 18px;
+    color: $white;
+    font-weight: 600;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(.9);
+    }
+
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+    }
+  }
+
+  &--outline {
+    background-color: $white;
+    color: $brand-primary;
+    outline: none;
+    border: 1px solid;
+
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      color: darken($brand-primary, 5%);
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(.9);
+    }
+  }
+}
+
+span.o-btn{
+	cursor: inherit;
+}

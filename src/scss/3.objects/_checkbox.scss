@@ -1,0 +1,64 @@
+.o-checkbox {
+	position: relative;
+	margin-bottom: 9px;
+	> input {
+		&:not(:checked),
+		&:checked {
+			position: absolute;
+			left: -9999px;
+			+ label{
+				position: relative;
+				padding-top: 1px;
+				padding-left: 28px;
+				cursor: pointer;
+				font-family: inherit;
+				font-size: 14px;
+				font-weight: 300;
+				color: inherit;
+				&:before {
+					content: '';
+					position: absolute;
+					left:0;
+					top: 0;
+					width: 22px;
+					height: 22px;
+					background: white;
+					border: 1px solid #d0d0d0;
+					border-radius: 0;
+				}
+				&:after {
+					content: '';
+					position: absolute;
+					width: 14px;
+					height: 12px;
+					top: 5px;
+					left: 5px;
+					background-color: transparent;
+					background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDE0NSA3LjgzIDYuODEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAxNDUgNy44MyA2LjgxOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6IzM0QjhBQTt9PC9zdHlsZT48cGF0aCBjbGFzcz0ic3QwIiBkPSJNNy42MSwxNDUuMTJjLTAuMjUtMC4xOS0wLjYxLTAuMTQtMC44LDAuMWwtMy45Miw1LjEybC0xLjg2LTIuMTJjLTAuMTktMC4yNS0wLjU1LTAuMy0wLjgtMC4xYy0wLjI1LDAuMTktMC4zLDAuNTUtMC4xMSwwLjhsMi4yOCwyLjZjMC4wNCwwLjA3LDAuMDksMC4xNCwwLjE1LDAuMTljMC4wMywwLjAyLDAuMDYsMC4wMywwLjA5LDAuMDRjMCwwLDAsMCwwLDBjMC4wNiwwLjAzLDAuMTEsMC4wNSwwLjE4LDAuMDZjMC4wMywwLjAxLDAuMDYsMC4wMSwwLjA5LDAuMDFjMC4wMywwLDAuMDYsMCwwLjA5LTAuMDFjMC4wNi0wLjAxLDAuMTItMC4wMywwLjE4LTAuMDZjMCwwLDAsMCwwLDBjMC4wMy0wLjAyLDAuMDYtMC4wMiwwLjA5LTAuMDRjMC4wNy0wLjA2LDAuMTItMC4xMywwLjE2LTAuMjFsNC4yOC01LjU4QzcuOSwxNDUuNjcsNy44NiwxNDUuMzEsNy42MSwxNDUuMTJ6Ii8+PC9zdmc+);
+					background-position: center center;
+					background-repeat: no-repeat;
+					background-size: contain;
+					transition: opacity .2s, transform 0.2s;
+				}
+			}
+		}
+
+		&:not(:checked) {
+			+ label {
+				&:after {
+					opacity: 0;
+					transform: scale(0);
+				}
+			}
+		}
+
+		&:checked {
+			+ label {
+				&:after {
+					opacity: 1;
+					transform: scale(1);
+				}
+			}
+		}
+	}
+}

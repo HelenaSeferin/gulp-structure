@@ -1,0 +1,44 @@
+.c-main-footer {
+
+  @media (max-width: $screen-xs-max) {
+    text-align: center;
+  }
+
+  &__nav{
+    @extend .u-clearfix;
+    text-align: center;
+    border-top: 1px solid;
+    color: $brand-primary;
+    text-transform: uppercase;
+
+    ul{
+      text-align: center;
+
+      li{
+        padding: 0 1.8em 0;
+
+        a{
+          font-size: 14px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  &__bottom{
+    background-color: #f1f1f1;
+    @extend .u-clearfix;
+    padding: 1em 3em;
+  }
+
+  &__list {
+
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: 1em;
+    }
+
+    @media (min-width: $screen-sm) {
+      float: left;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+// input objects are the only ones that can have cosmetic styles
+// because their definition in base would be too complex.
+// e.g.: input[type="text"], input[type="password"]...
+.o-input {
+  display: block;
+  width: 100%;
+  border: 3px solid #e2e2e2;
+  color: #777;
+  font-size: 1.125rem;
+  line-height: 2;
+  height: 51px; // required by IE
+  outline: none;
+  padding: .25em .5em;
+}
+
+.o-input--textarea{
+    height: inherit;
+}

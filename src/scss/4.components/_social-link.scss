@@ -1,0 +1,22 @@
+.c-social-link {
+  display: block;
+  height: 30px;
+  width: 30px;
+  border-width: 1px;
+  border-style: solid;
+  line-height: 1.7;
+  text-align: center;
+
+  svg {
+    fill: $brand-primary;
+  }
+
+  &--rounded {
+    border-color: $white;
+    border-radius: 50%;
+
+    svg {
+      fill: $white;
+    }
+  }
+}
