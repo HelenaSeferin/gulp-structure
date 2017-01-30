@@ -47,3 +47,11 @@ Estrutura Base para os projetos
 ## Desenvolvedoras:
 
 Amanda Vieira e Helena Seferin
+
+
+## Comandos úteis
+
+Instalar dependencias
+```sh
+npm install --save-dev *`nomedependencia`*
+```
