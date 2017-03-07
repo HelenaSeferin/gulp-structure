@@ -4,7 +4,7 @@
 
 Estrutura Base para os projetos
 
-## TODO:
+<!-- ## TODO:
 
 - [x] Compilar e concatenar ```*.SCSS ``` para ```.CSS```;
 - [x] Minificar os arquivos ```.CSS``` encontrados.;
@@ -13,8 +13,7 @@ Estrutura Base para os projetos
 - [x] Criar o ```REV``` para ```.CSS``` e ```.JS```;
 - [ ] Criar tarefa de Build
 - [ ] Minificar ```.HTML```
-- [ ] Minificar Imagens
-
+- [ ] Minificar Imagens -->
 
 ## Dependências:
 
@@ -31,7 +30,6 @@ Estrutura Base para os projetos
 2 - Após a instalação rode o comando "gulp" para compilar os arquivos e iniciar o projeto.
 
 ```
-
 
 ## Construído com
 
