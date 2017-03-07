@@ -16,19 +16,19 @@ Estrutura Base para os projetos
 - [ ] Minificar Imagens
 
 
-## Softwares necessários:
+## Dependências:
 
 ```
 1 - Node.js
 2 - NPM (incluso na versão Windows do Node.js)
 ```
 
-## Instruções de como utilizar o projeto
+## Instalando e rodando
 
 ```
-0 - "npm install"
+1 - Rode "npm install" para baixar as dependências
 
-1 - Após a instalação rode o comando "gulp"
+2 - Após a instalação rode o comando "gulp" para compilar os arquivos e iniciar o projeto em <a href="http://localhost:8888">http://localhost:3000</a>
 
 ```
 
