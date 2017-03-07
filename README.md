@@ -26,9 +26,9 @@ Estrutura Base para os projetos
 ## Instalando e rodando
 
 ```
-1 - Rode "npm install" para baixar as dependências
+1 - Rode "npm install" para baixar as dependências.
 
-2 - Após a instalação rode o comando "gulp" para compilar os arquivos e iniciar o projeto em <a href="http://localhost:8888">http://localhost:3000</a>
+2 - Após a instalação rode o comando "gulp" para compilar os arquivos e iniciar o projeto.
 
 ```
 
