@@ -54,46 +54,37 @@ Amanda Vieira e Helena Seferin
 
 Instalar dependencias
 ```sh
-###### npm install --save-dev *`nomedependencia`*
-```
-```sh
-###### gulp build 
-- compila os arquivos html, css rev e js rev
-```
-```sh
-###### gulp css-compile 
+npm install --save-dev *`nomedependencia`*
+- instala a dependência desejada 
+
+gulp build 
+- compila os arquivos ```*.HTML ```, ```*.CSS ``` rev e ```*.CSS ``` rev
+
+gulp css-compile 
 - compila o css da pasta SRC e redireciona para a dist
-```
-```sh
-###### gulp css-minify 
+
+gulp css-minify 
 - minifica o css da pasta SRC e redireciona para a dist
-```
-```sh
-###### gulp js-compile 
+
+gulp js-compile 
 - compila o js da pasta SRC e redireciona para a dist
-```
-```sh
-###### gulp js-minify 
+
+gulp js-minify 
 - minifica o js da pasta SRC e redireciona para a dist
-```
-```sh
-###### gulp html 
+
+gulp html 
 - seleciona os arquivos *html da pasta SRC e redireciona para a dist
-```
-```sh
-###### gulp js-rev 
--
-```
-```sh
-###### gulp css-rev 
-- 
-```
-```sh
-###### gulp image-minify 
+
+gulp js-rev 
+- depois de compilar e minificar o ```*.JS ```, a cada nova alteração ele cria um hash no nome do arquivo e atualiza no manifest, evitando o cache.
+
+gulp css-rev 
+- depois de compilar e minificar o ```*.CSS ```, a cada nova alteração ele cria um hash no nome do arquivo e atualiza no manifest, evitando o cache.
+
+gulp image-minify 
 - compacta as imagens da pasta SRC/images e coloca na dist/img
-```
-```sh
-###### gulp default 
+
+gulp default 
 - executa todas as tasks e levanta o ambiente (localhost)
 ```
 
