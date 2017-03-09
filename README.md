@@ -54,11 +54,11 @@ Amanda Vieira e Helena Seferin
 
 Instalar dependencias
 ```sh
-npm install --save-dev *`nomedependencia`*
+npm install --save-dev *nomedependencia*
 - instala a dependência desejada 
 
 gulp build 
-- compila os arquivos ```*.HTML ```, ```*.CSS ``` rev e ```*.CSS ``` rev
+- compila os arquivos *.HTML*, *.CSS* rev e *.JS* rev
 
 gulp css-compile 
 - compila o css da pasta SRC e redireciona para a dist
@@ -76,10 +76,10 @@ gulp html
 - seleciona os arquivos *html da pasta SRC e redireciona para a dist
 
 gulp js-rev 
-- depois de compilar e minificar o ```*.JS ```, a cada nova alteração ele cria um hash no nome do arquivo e atualiza no manifest, evitando o cache.
+- depois de compilar e minificar o *.JS*, a cada nova alteração ele cria um hash no nome do arquivo e atualiza no manifest, evitando o cache.
 
 gulp css-rev 
-- depois de compilar e minificar o ```*.CSS ```, a cada nova alteração ele cria um hash no nome do arquivo e atualiza no manifest, evitando o cache.
+- depois de compilar e minificar o *.CSS*, a cada nova alteração ele cria um hash no nome do arquivo e atualiza no manifest, evitando o cache.
 
 gulp image-minify 
 - compacta as imagens da pasta SRC/images e coloca na dist/img
