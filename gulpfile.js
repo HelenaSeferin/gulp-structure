@@ -43,7 +43,7 @@ gulp.task('css-minify', ['css-compile'], function() {
 gulp.task('css-rev', ['css-minify'], function () {
   return gulp.src([target + 'css/*.css'], {base: path.join(process.cwd(), 'public')})
     .pipe(rev())
-    .pipe(rev.manifest(target+'rev-manifest.json', {
+    .pipe(rev.manifest(target + 'rev-manifest.json', {
       base: target,
       merge: true,
     }))
@@ -68,7 +68,7 @@ gulp.task('js-minify', ['js-compile'], function() {
 gulp.task('js-rev', ['js-minify'], function () {
   return gulp.src([target + 'js/*.js'], {base: path.join(process.cwd(), 'public')})
     .pipe(rev())
-    .pipe(rev.manifest(target+'rev-manifest.json', {
+    .pipe(rev.manifest(target + 'rev-manifest.json', {
       base: target,
       merge: true,
     }))
