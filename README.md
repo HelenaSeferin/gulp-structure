@@ -1,4 +1,4 @@
-# Título do Projeto
+# new-structure
 
 ## Apresentação do Projeto
 
@@ -16,13 +16,13 @@ Essa é uma estrutura base para o desenvolvimento dos projetos na DZ Estudio. Cl
 1 - Para baixar as dependências de frontend.:
 
 ```
-npm install
+$ npm install
 ```
 
 2 - Para rodar o projeto em [http://localhost:3000](http://localhost:3000):
 
 ```
-gulp
+$ gulp
 ```
 
 ## Outros comandos úteis 
@@ -50,6 +50,7 @@ gulp
 * BrowserSync - Servidor Local
 * Sass - Preprocessador de CSS
 * Gulp-concat - Concatenador de arquivos JS
+* Gulp REV - Adiciona/atualiza um hash no nome do arquivo e atualiza a chamada no manifest.
 
 ## Desenvolvedoras:
 
