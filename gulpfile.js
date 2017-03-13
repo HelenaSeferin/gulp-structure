@@ -11,6 +11,7 @@ var imagemin        = require('gulp-imagemin');
 var uglifycss       = require('gulp-uglifycss');
 var sourcemaps      = require('gulp-sourcemaps');
 var browserSync     = require('browser-sync').create();
+var autoprefixer    = require('gulp-autoprefixer');
 
 gulp.task('serve', ['build'], function () {
 
@@ -30,6 +31,7 @@ gulp.task('css-compile', function() {
   return gulp.src(source + 'scss/**/*.scss')
     .pipe(sass())
     .pipe(concat('style.css'))
+    .pipe(autoprefixer())
     .pipe(gulp.dest(target + 'css'))
     /*.pipe(browserSync.stream())*/;
 });
