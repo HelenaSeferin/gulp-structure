@@ -3,6 +3,8 @@
 ## Apresentação do Projeto
 
 Essa é uma estrutura base para o desenvolvimento dos projetos na DZ Estudio. Clone este repositório para o seu local e siga os passos a seguir para instalação das dependências e para levantar o ambiente de desenvolvimento ([http://localhost:3000](http://localhost:3000))!
+A estrutura consiste em rodar os comandos básicos de um projeto, minificando, compilando e compactando arquivos, direcionando eles para a pasta destino informada no arquivo gulpfile.js no valor da variável ``target.``  
+Os arquivos devem ser organizados na pasta SRC ou na pasta padrão de conteúdo dependendo da forma como o projeto vai ser desenvolvido. 
 
 ## Softwares necessários:
 
@@ -50,7 +52,7 @@ $ gulp
 * BrowserSync - Servidor Local
 * Sass - Preprocessador de CSS
 * Gulp-concat - Concatenador de arquivos JS
-* Gulp REV - Adiciona/atualiza um hash no nome do arquivo e atualiza a chamada no manifest.
+* Gulp REV - Adiciona/atualiza um hash no nome do arquivo para evitar cache
 
 ## Desenvolvedoras:
 
