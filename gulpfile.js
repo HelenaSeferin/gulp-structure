@@ -1,4 +1,5 @@
-var target          = 'dist/';
+var target          = 'public/';
+var source          = 'src/';
 var gulp            = require('gulp');
 var path            = require('path');
 var rev             = require('gulp-rev');
@@ -17,16 +18,16 @@ gulp.task('serve', ['build'], function () {
         server: target
     });
 
-    gulp.watch('src/scss/**/*.scss', ['css-compile']);
-    gulp.watch('src/js/*.js');
-    gulp.watch('src/**/*.html').on('change', browserSync.reload);
+    gulp.watch(source + 'scss/**/*.scss', ['css-compile']);
+    gulp.watch(source + 'js/*.js');
+    gulp.watch('public/**/*.html').on('change', browserSync.reload);
 
 });
 
-gulp.task('build', ['html', 'css-rev', 'js-rev']);
+gulp.task('build', ['css-rev', 'js-rev']);
 
 gulp.task('css-compile', function() {
-  return gulp.src('src/scss/**/*.scss')
+  return gulp.src(source + 'scss/**/*.scss')
     .pipe(sass())
     .pipe(concat('style.css'))
     .pipe(gulp.dest(target + 'css'))
@@ -43,7 +44,7 @@ gulp.task('css-minify', ['css-compile'], function() {
 });
 
 gulp.task('js-compile', function() {
-  return gulp.src('src/js/**/*.js')
+  return gulp.src(source + 'js/**/*.js')
     .pipe(concat('all.js'))
     .pipe(gulp.dest(target + 'js'))
 });
@@ -78,7 +79,7 @@ gulp.task('css-rev', ['css-minify'], function () {
 });
 
 gulp.task('image-minify', function () {
-  return gulp.src('src/images/**/*')
+  return gulp.src(source + 'images/**/*')
     .pipe(imagemin({
       progressive: true,
       interlaced: true

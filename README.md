@@ -30,11 +30,10 @@ $ gulp
 ## Outros comandos úteis 
 
 * **`npm install --save-dev 'nomedependencia' `** - instala a dependência desejada 
-* **`gulp css-compile`** - compila os arquivos ``*.SCSS`` da pasta SRC e redireciona para a dist 
-* **`gulp css-minify`** - minifica os arquivos ``*.SCSS`` da pasta SRC e redireciona para a dist
+* **`gulp css-compile`** - compila os arquivos ``*.SCSS`` da pasta SRC para o ``style.css`` na DIST
+* **`gulp css-minify`** - depois de executar a task de compilação, o arquivo vai ser minificado e direcionado para a DIST, renomeado como ``style.min.css`` (obs.: este arquivo final é o que deve ser chamado na ``index.html``)
 * **`gulp js-compile`** - compila o ``*.JS`` da pasta SRC e redireciona para a dist
 * **`gulp js-minify`** - minifica o ``*.JS`` da pasta SRC e redireciona para a dist
-* **`gulp html`** - seleciona os arquivos ``*.HTML`` da pasta SRC e redireciona para a dist
 * **`gulp js-rev`** - depois de compilar e minificar os arquivos ``*.JS``, a cada nova alteração ele cria um hash no nome do arquivo e atualiza no manifest, evitando o cache.
 * **`gulp css-rev`** - depois de compilar e minificar os arquivos ``*.SCSS``, a cada nova alteração ele cria um hash no nome do arquivo e atualiza no manifest, evitando o cache.
 * **`gulp build`** - executa as tasks de css-rev e js-rev  
