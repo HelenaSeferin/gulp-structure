@@ -45,7 +45,7 @@ $ gulp
 
 * Node.js - Framework
 * Gulp - Automatizador de Tarefas
-* Browserify - Modularizador de Front-End
+* Browserify - Modularizador Javascript
 * Uglify - Minificador de JS
 * UglifyCSS - Minificador de CSS
 * BrowserSync - Servidor Local
