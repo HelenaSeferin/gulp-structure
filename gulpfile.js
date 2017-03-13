@@ -12,7 +12,6 @@ var uglifycss       = require('gulp-uglifycss');
 var sourcemaps      = require('gulp-sourcemaps');
 var browserSync     = require('browser-sync').create();
 var autoprefixer    = require('gulp-autoprefixer');
-var browserify      = require('browserify');
 
 gulp.task('serve', ['build'], function () {
 
