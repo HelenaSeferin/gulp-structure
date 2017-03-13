@@ -57,11 +57,6 @@ gulp.task('js-minify', ['js-compile'], function() {
     .pipe(gulp.dest(target + 'js'))
 });
 
-gulp.task('html', function() {
-  return gulp.src('src/*.html')
-    .pipe(gulp.dest(target))
-});
-
 gulp.task('js-rev', ['js-minify'], function () {
   return gulp.src([target + 'js/*.min.js'])
     .pipe(rev())
